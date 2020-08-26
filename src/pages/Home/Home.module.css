@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttonGroup {
+    height: fit-content;
+}
+
+.bgImage {
+    background-image: url('../../assets/img/conscapa2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
