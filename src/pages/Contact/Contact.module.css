@@ -1,0 +1,19 @@
+.container {
+    background-image: url('../../assets/img/conscapa3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+}
+
+.formBox {
+    background-color: #ECEBF3;
+    border-radius: 10px;
+    padding: 30px;
+    align-self: center;
+    margin: 30px 0px 30px 0px;
+    width: 40%;
+    height: 100%;
+}

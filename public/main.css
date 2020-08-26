@@ -8,6 +8,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
 }
 
 .container {
@@ -85,4 +86,19 @@
 .menuBox {
     margin: 0;
     padding: 0;
+}
+
+.nav-right-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    padding: 20px;
 }

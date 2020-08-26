@@ -1,0 +1,11 @@
+.errorMessage {
+    padding: 10px;
+    color: red;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.message {
+    margin-left: 10px;
+}

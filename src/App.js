@@ -1,35 +1,57 @@
 import React from "react"
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Link } from 'react-router-dom'
 import { VscMenu } from 'react-icons/vsc'
 
 import { Navbar, NavItem, DropDown, DropDownItem } from './components'
-import { Home } from './pages'
+import { Home, Contact, About, Login, PageNotFound } from './pages'
 
 const App = () => {
+
+    const loginButton = (
+        <button className="btn primaryButtonOutlined login-btn">Log In</button>
+    )
+
     return (
         <div className="container">
             <Navbar>
                 <NavItem itemContent="Conscapa" />
-                <NavItem itemContent={<VscMenu />}>
-                    <DropDown>
-                        <div className="menuBox">
-                            <DropDownItem to="/contact">
-                                Contacto
-                            </DropDownItem>
-                            <DropDownItem to="/projects">
-                                Proyectos
-                            </DropDownItem>
-                            <DropDownItem to="/about">
+                <div className="nav-right-items">
+                    <Link to="/login" className="login-btn">
+                        <NavItem itemContent={loginButton} />
+                    </Link>
+                    <NavItem itemContent={<VscMenu />}>
+                        <DropDown>
+                            <div className="menuBox">
+                                <DropDownItem to="/contact">
+                                    Contacto
+                                </DropDownItem>
+                                <DropDownItem to="/projects">
+                                    Proyectos
+                                </DropDownItem>
+                                <DropDownItem to="/about">/
                                 Sobre la empresa
-                            </DropDownItem>
-                        </div>
-                    </DropDown>
-                </NavItem>
+                                </DropDownItem>
+                            </div>
+                        </DropDown>
+                    </NavItem>
+                </div>
             </Navbar>
             <div className="content">
                 <Switch>
                     <Route exact path="/">
                         <Home />
+                    </Route>
+                    <Route path="/contact">
+                        <Contact />
+                    </Route>
+                    <Route path="/about">
+                        <About />
+                    </Route>
+                    <Route path="/login">
+                        <Login />
+                    </Route>
+                    <Route exact path="*">
+                        <PageNotFound />
                     </Route>
                 </Switch>
             </div>
