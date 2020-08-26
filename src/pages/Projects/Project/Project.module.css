@@ -1,0 +1,19 @@
+.container {
+    padding: 20px;
+    border: 2px solid #F9C22E;
+    border-radius: 8px;
+    margin: 0 20px 0 20px;
+    height: fit-content;
+}
+
+.img {
+    height: 300px;
+    width: 300px;
+    padding: 20px;
+}
+
+.name {
+    width: 100%;
+    font-size: 20px;
+    align-self: center;
+}

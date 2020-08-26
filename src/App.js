@@ -3,7 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom'
 import { VscMenu } from 'react-icons/vsc'
 
 import { Navbar, NavItem, DropDown, DropDownItem } from './components'
-import { Home, Contact, About, Login, PageNotFound } from './pages'
+import { Home, Contact, About, Login, PageNotFound, Projects, ProjectPage } from './pages'
 
 const App = () => {
 
@@ -28,8 +28,8 @@ const App = () => {
                                 <DropDownItem to="/projects">
                                     Proyectos
                                 </DropDownItem>
-                                <DropDownItem to="/about">/
-                                Sobre la empresa
+                                <DropDownItem to="/about">
+                                    Sobre la empresa
                                 </DropDownItem>
                             </div>
                         </DropDown>
@@ -49,6 +49,12 @@ const App = () => {
                     </Route>
                     <Route path="/login">
                         <Login />
+                    </Route>
+                    <Route path="/projects">
+                        <Projects />
+                    </Route>
+                    <Route path="/project/:projectId">
+                        <ProjectPage />
                     </Route>
                     <Route exact path="*">
                         <PageNotFound />
